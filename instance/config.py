@@ -1,34 +1,8 @@
-class Config(object):
-    """
-    Common configurations
-    """
+# instance/config.py
 
-    # Put any configurations here that are common across all environments
+# an secret key is needed
+SECRET_KEY = 'p9Bv<3Eid9%$i01'
 
+# ADD MYSQL DATABASE LINK HERE
+SQLALCHEMY_DATABASE_URI = 'mysql://saefulas:eful2805@localhost/dscemployee'
 
-class DevelopmentConfig(Config):
-    """
-    Development configurations
-    """
-
-    DEBUG = True
-    # setting this to True activates the debug mode on the app.
-    # This allows us to use the Flask debugger in case of an unhandled exception, and
-    # also automatically reloads the application when it is updated.
-    SQLALCHEMY_ECHO = True
-    # setting this to True helps us with debugging by allowing SQLAlchemy to
-    # log errors.
-
-
-class ProductionConfig(Config):
-    """
-    Production configurations
-    """
-
-    DEBUG = False
-
-
-app_config = {
-    'development': DevelopmentConfig,
-    'production': ProductionConfig
-}

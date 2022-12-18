@@ -3,13 +3,13 @@ from flask_login import login_required, current_user
 
 from . import home
 from .. import db
-from run import User
+from ..models import Employee
 
 
 @home.route('/')
 def homepage():
 
-    return render_template('home/index.html', title='Welcome to Data Science Master')
+    return render_template('home/index.html', title='Welcome to Squad Master')
 
 
 @home.route('/dashboard')
@@ -30,4 +30,4 @@ def admin_dashboard():
 @login_required
 def profile():
 
-    return render_template('home/profilepage.html', title='User Profile')
+    return render_template('home/profilepage.html', title='Employee Profile')

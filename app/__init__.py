@@ -7,7 +7,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 # local imports
-from instance.config import app_config
+from config import app_config
 
 # db variable initialization
 db = SQLAlchemy()
